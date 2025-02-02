@@ -1,0 +1,1 @@
+export {AppRouterProvider} from '@app/providers/AppRouterProvider.tsx';
