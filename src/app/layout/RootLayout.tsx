@@ -9,8 +9,8 @@ export default function RootLayout() {
             <NavBar/>
             <SideSection>
                 <SideBar/>
+                <Outlet/>
             </SideSection>
-            <Outlet/>
         </Container>
     )
 }
@@ -25,8 +25,7 @@ const Container = styled.div`
 
 const SideSection = styled.div`
     display: flex;
-    flex-direction: column;
-    width: 15%;
-    height: 100vh;
-    background-color: darkslategray;
+    flex-direction: row;
+    width: 100%;
+    height: 90vh;
 `;

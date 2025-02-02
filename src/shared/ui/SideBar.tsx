@@ -1,11 +1,13 @@
-import {Link} from "react-router-dom";
 import styled from "styled-components";
+import MenuItem from "@shared/ui/MenuItem.tsx";
+
+
 
 const SideBar = () => {
     return (
         <NavContainer>
-            <Link to={'/'}>찾기</Link>
-            <Link to='/movies'>영화</Link>
+            <MenuItem to={'/search'} icon={<SearchIcon />} text="찾기" />
+            <MenuItem to='/category' icon={<MovieIcon />} text="영화" />
         </NavContainer>
     );
 };
@@ -14,7 +16,12 @@ export default SideBar;
 
 const NavContainer = styled.div`
     display: flex;
-    justify-content: center;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    padding-left: 15px;
+    background-color: rgb(19, 21, 23);
+    width: 15%;
 `;
+
+const SearchIcon = () => <span role="img" aria-label="search">🔍</span>;
+const MovieIcon = () => <span role="img" aria-label="movie">🎬</span>;

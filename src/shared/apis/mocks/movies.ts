@@ -1,4 +1,3 @@
-// mocks 폴더에 movies.js 파일을 만든 후, 해당 파일을 사용해봅시다!
 export const MOVIES = {
     "dates": {
         "maximum": "2023-09-17",
